@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Coda'>
+  <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/sweetalert2/3.0.3/sweetalert2.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="containerdiv">
+  <h1>Memory Game</h1>
+  <div id="score-panel">
+    <div class="leftdiv">
+    	<ul class="stars">
+    		<li><i class="fa fa-star"></i></li>
+    		<li><i class="fa fa-star"></i></li>
+    		<li><i class="fa fa-star"></i></li>
+    	</ul>
+    	<span class="moves">0</span> Moves
+    </div>
+    <div class="timers">
+      <article class="timer">
+        <h3 class="info">Time: <span class="clock data">0:00</span></h3>
+      </article>
+      <div class="restart">
+    		<i class="fa fa-repeat"></i>
+    	</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <ul class="deck"></ul>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/sweetalert2/3.0.3/sweetalert2.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+</html>

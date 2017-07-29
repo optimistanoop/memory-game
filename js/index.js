@@ -86,11 +86,12 @@ let setRating =(moves)=> {
 // Open Popup for showing required details 
 // On configuaration, show default view
 let endGame = (moves, score) => {
+	let msg = score == 1 ? score + ' Star' :score +' Stars';
 	swal({
 		allowEscapeKey: false,
 		allowOutsideClick: false,
 		title: 'Congratulations! You Won!',
-		text: 'With ' + moves + ' Moves and ' + score + ' Stars.\n Woooooo!',
+		text: 'With ' + moves + ' Moves and ' + msg + '\n Woooooo!',
 		type: 'success',
 		confirmButtonColor: '#02ccba',
 		confirmButtonText: 'Play again!'
@@ -108,11 +109,13 @@ let addClkListener = ()=> {
 	$deck.find('.card:not(".match, .open")').bind('click' , function() {
 		clicks++ ;
 		clicks == 1 ? gameTimer() :'';
+		// Check for call to be heppend before all dom update
 		if($('.show').length > 1) { return true; };
 		let $this = $(this), card = $this.context.innerHTML;
+		// Check if the player has clicked the same card
+		if($this.hasClass('open')){ return true;};
 	  $this.addClass('open show');
 		opened.push(card);
-		
 		// Check with opened card
 		// Add view changes in cards
 		// Remove css animation classes

@@ -31,3 +31,6 @@ The memory game presents the first opportunity to fully combine HTML, CSS, and J
 * Next, work on the matching logic. How does your game "know" if a player guesses correctly or incorrectly?
 * We recommend saving styling until the very end. Allow your game logic and functionality to dictate the styling.
 
+## Credits
+* [memory-game](https://github.com/PoBlue/memory-game)
+
